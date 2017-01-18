@@ -17,8 +17,8 @@ function getQuote() {
 			var post = postings[getRandInt(0, 49)];
 			quote = post.text;
 			author = "– " + post.source;
-			$(".quote").html(quote);
-			$(".quoteauth").html(author);
+			$(".quote").html(quote).css("transition", "fade-in 2s");
+			$(".quoteauth").html(author).css("transition", "fade-in 2s");
 
 		}
 	});
