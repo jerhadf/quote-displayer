@@ -10,7 +10,7 @@ function getQuote() {
 	var author = "";
 
 	$.ajax({
-		url: "https://api.tumblr.com/v2/blog/heremyjadfield.tumblr.com/posts/quote?			api_key=xboyZKnoEhzmna7GYfCOy6dUpY23bWDwOUIMw0M7nO5K0X2HPS&limit=50",
+		url: "https://api.tumblr.com/v2/blog/heremyjadfield.tumblr.com/posts/quote?api_key=xboyZKnoEhzmna7GYfCOy6dUpY23bWDwOUIMw0M7nO5K0X2HPS&limit=50",
 		dataType: 'jsonp',
 		success: function(posts) {
 			var postings = posts.response.posts;
@@ -19,7 +19,7 @@ function getQuote() {
 			author = "– " + post.source;
 			$(".quote").html(quote);
 			$(".quoteauth").html(author);
-			
+
 		}
 	});
 }
@@ -31,8 +31,14 @@ $(".quotecircle").click(function() {
 	var randColor = colors[getRandInt(0, colors.length)];
 	console.log(randColor);
 
-	$("body").css("background-color", randBack);
-	$(".quotecircle").css("background-color", randColor);
+	$("body").css({
+		"background-color":randBack, 
+		"-webkit-transition":"background-color 2s" 
+	});
+	$(".quotecircle").css({
+		"background-color":randColor, 
+		"-webkit-transition":"background-color 2s" 
+	});
 
 	// display elements
 	$(".quotetxt").css("display", "none");
