@@ -19,7 +19,7 @@ function getQuote() {
 			author = "– " + post.source;
 			$(".quote").html(quote);
 			$(".quoteauth").html(author);
-
+			
 		}
 	});
 }
