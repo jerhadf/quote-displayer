@@ -9,14 +9,17 @@ function getQuote() {
 	var quote = "";
 	var author = "";
 
-$.ajax({
+	$.ajax({
 		url: "https://api.tumblr.com/v2/blog/heremyjadfield.tumblr.com/posts/quote?			api_key=xboyZKnoEhzmna7GYfCOy6dUpY23bWDwOUIMw0M7nO5K0X2HPS&limit=50",
 		dataType: 'jsonp',
 		success: function(posts) {
 			var postings = posts.response.posts;
+			var post = postings[getRandInt(0, 49)];
+			quote = post.text;
 			author = "– " + post.source;
 			$(".quote").html(quote);
 			$(".quoteauth").html(author);
+
 		}
 	});
 }
