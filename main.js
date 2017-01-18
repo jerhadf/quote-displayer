@@ -33,11 +33,11 @@ $(".quotecircle").click(function() {
 
 	$("body").css({
 		"background-color":randBack, 
-		"-webkit-transition":"background-color 2s" 
+		"transition":"background-color 2s" 
 	});
 	$(".quotecircle").css({
 		"background-color":randColor, 
-		"-webkit-transition":"background-color 2s" 
+		"transition":"background-color 2s" 
 	});
 
 	// display elements
