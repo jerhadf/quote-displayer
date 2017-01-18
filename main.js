@@ -1,5 +1,5 @@
-var backColors = ["#16a085", "#2ecc71", "#3498db", "#9b59b6", "#2c3e50", "#7f8c8d", "#bdc3c7"];
-var colors = ["#f1c40f", "#f39c12", "#d35400", "#c0392b", "#e74c3c", "#0D47A1", "#512DA8", "#FF1744", "#00E5FF", "#00E676", "#43A047", "#4A148C"];
+var backColors = ["#16a085", "#2ecc71", "#3498db", "#9b59b6", "#2c3e50", "#7f8c8d", "#bdc3c7", "#5D4037", "#212121", "#607D8B", "#F57F17", "#FF8A65", "#80CBC4", "#BA68C8", "#7986CB", "#AEEA00", "#18FFFF", "#448AFF", "#FFD600"];
+var colors = ["#f1c40f", "#f39c12", "#d35400", "#c0392b", "#e74c3c", "#0D47A1", "#512DA8", "#FF1744", "#00E5FF", "#00E676", "#43A047", "#4A148C", "#b71c1c", "#880E4F", "#4A148C", "#311B92", "#4527A0", "#1A237E", "#0D47A1", "#01579B", "#006064", "#004D40", "#1B5E20", "#BF360C", "#d50000", "#6200EA", "#304FFE", "#DD2C00", "#00C853"];
 
 function getRandInt(min, max) {
 	return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -14,8 +14,6 @@ $.ajax({
 		dataType: 'jsonp',
 		success: function(posts) {
 			var postings = posts.response.posts;
-			var post = postings[getRandInt(0, 49)];
-			quote = post.text;
 			author = "– " + post.source;
 			$(".quote").html(quote);
 			$(".quoteauth").html(author);
