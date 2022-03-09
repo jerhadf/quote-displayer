@@ -1,2 +1,2 @@
 # quote-displayer
-Displays random quotes imported from Tumblr API. Built from scratch.
+Displays random philosophy quotes on a simple interface. Built from scratch.
